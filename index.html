@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
+
 <body>
 
 
@@ -59,7 +61,136 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
-    //put your script code here
+    const highlight = document.querySelector('div[data-key="65"]'); // this is to put "a" into globle scope
+    const highlightS = document.querySelector('div[data-key="83"]'); // this is to put "s" into globle scope
+    const highlightD = document.querySelector('div[data-key="68"]'); // this is to put "d" into globle scope
+    const highlightF = document.querySelector('div[data-key="70"]'); // this is to put "f" into globle scope
+    const highlightG = document.querySelector('div[data-key="71"]'); // this is to put "g" into globle scope
+    const highlightH = document.querySelector('div[data-key="72"]'); // this is to put "h" into globle scope
+    const highlightJ = document.querySelector('div[data-key="74"]'); // this is to put "j" into globle scope
+    const highlightK = document.querySelector('div[data-key="75"]'); // this is to put "k" into globle scope
+    const highlightL = document.querySelector('div[data-key="76"]'); // this is to put "L" into globle scope
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "a") {
+        const audioA = document.querySelector('audio[data-key="65"]');
+        audioA.play();
+        audioA.currentTime = 0;
+
+        highlight.classList.add("playing");
+
+        const afterHighlight = document.querySelector(".playing");
+
+        afterHighlight.addEventListener("transitionend", (event) => {
+          highlight.classList.remove("playing");
+        });
+
+      } else if (event.key === "s") {
+        const audioS = document.querySelector('audio[data-key="83"]');
+        audioS.play();
+        audioS.currentTime = 0;
+
+        highlightS.classList.add("playing");
+
+        const affterHighlightS = document.querySelector(".playing");
+
+        affterHighlightS.addEventListener("transitionend", (event) => {
+          highlightS.classList.remove("playing");
+        });
+
+
+      } else if (event.key === "d") {
+        const audioD = document.querySelector('audio[data-key="68"]');
+        audioD.play();
+        audioD.currentTime = 0;
+
+        highlightD.classList.add("playing");
+
+        const affterHighlightD = document.querySelector(".playing");
+
+        affterHighlightD.addEventListener("transitionend", (event) => {
+          highlightD.classList.remove("playing");
+        });
+
+      } else if (event.key === "f") {
+        const audioF = document.querySelector('audio[data-key="70"]');
+        audioF.play();
+        audioF.currentTime = 0;
+
+        highlightF.classList.add("playing");
+
+        const affterHighlightF = document.querySelector(".playing");
+
+        affterHighlightF.addEventListener("transitionend", (event) => {
+          highlightF.classList.remove("playing");
+        });
+      } else if (event.key === "g") {
+        const audioG = document.querySelector('audio[data-key="71"]');
+        audioG.play();
+        audioG.currentTime = 0;
+
+        highlightG.classList.add("playing");
+
+        const affterHighlightG = document.querySelector(".playing");
+
+        affterHighlightG.addEventListener("transitionend", (event) => {
+          highlightG.classList.remove("playing");
+        });
+      } else if (event.key === "h") {
+        const audioH = document.querySelector('audio[data-key="72"]');
+        audioH.play();
+        audioH.currentTime = 0;
+
+        highlightH.classList.add("playing");
+
+        const affterHighlightH = document.querySelector(".playing");
+
+        affterHighlightH.addEventListener("transitionend", (event) => {
+          highlightH.classList.remove("playing");
+        });
+      } else if (event.key === "j") {
+        const audioJ = document.querySelector('audio[data-key="74"]');
+        audioJ.play();
+        audioJ.currentTime = 0;
+
+        highlightJ.classList.add("playing");
+
+        const affterHighlightJ = document.querySelector(".playing");
+
+        affterHighlightJ.addEventListener("transitionend", (event) => {
+          highlightJ.classList.remove("playing");
+        });
+      } else if (event.key === "k") {
+        const audioK = document.querySelector('audio[data-key="75"]');
+        audioK.play();
+        audioK.currentTime = 0;
+
+        highlightK.classList.add("playing");
+
+        const affterHighlightK = document.querySelector(".playing");
+
+        affterHighlightK.addEventListener("transitionend", (event) => {
+          highlightK.classList.remove("playing");
+        });
+      } else if (event.key === "l") {
+        const audioL = document.querySelector('audio[data-key="76"]');
+        audioL.play();
+        audioL.currentTime = 0;
+
+        highlightL.classList.add("playing");
+
+        const affterHighlightL = document.querySelector(".playing");
+
+        affterHighlightL.addEventListener("transitionend", (event) => {
+          highlightL.classList.remove("playing");
+        });
+      }
+
+
+
+
+    });
+
   </script>
 </body>
+
 </html>
